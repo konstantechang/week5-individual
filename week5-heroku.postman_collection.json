@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "e22ea855-55b0-45b6-a5f5-bd73b7f080f5",
+		"name": "week4-heroku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "取得所有的貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://secret-temple-70346.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"secret-temple-70346",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得單一貼文",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://secret-temple-70346.herokuapp.com/posts/62713c5a72d92f8a2b5ffaa2",
+					"protocol": "https",
+					"host": [
+						"secret-temple-70346",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts",
+						"62713c5a72d92f8a2b5ffaa2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "單一貼文",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"62713a3072d92f8a2b5ffaa0\",\r\n    \"tags\": \"ring and soul\",\r\n    \"type\": \"3D\",\r\n    \"image\": \"\",\r\n    \"content\": \"Hank, the Grim Reaper is the greatest warrior\",\r\n    \"likes\": 7777,\r\n    \"comments\": 77777\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://secret-temple-70346.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"secret-temple-70346",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
