@@ -129,8 +129,48 @@
         "tags": [
           "Posts"
         ],
-        "description": "",
-        "parameters": [],
+        "description": "貼文API",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "type": "object",
+            "description": "資料格式",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "user": {
+                  "type": "string",
+                  "example": "62713a3072d92f8a2b5ffaa0"
+                },
+                "tags": {
+                  "type": "string",
+                  "example": "ring and soul"
+                },
+                "type": {
+                  "type": "string",
+                  "example": "3D"
+                },
+                "content": {
+                  "type": "string",
+                  "example": "Elden Ris is good."
+                },
+                "image": {
+                  "type": "string",
+                  "example": "https://fakeface.rest/thumb/view/20?minimum_age=25"
+                },
+                "likes": {
+                  "type": "number",
+                  "example": 7777
+                },
+                "comments": {
+                  "type": "number",
+                  "example": 77777
+                }
+              }
+            }
+          }
+        ],
         "responses": {}
       }
     },
