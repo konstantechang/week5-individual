@@ -10,7 +10,7 @@ const postController = {
         /* 
             #swagger.tags = ['Posts']
             #swagger.description = '取得<b>全部</b>貼文 API'
-            #swagger.response[200] = {
+            #swagger.responses[200] = {
                 description: '貼文資訊',
                 schema: {
                     "status": true,

@@ -47,7 +47,83 @@
             "in": "query"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "貼文資訊",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "message": {
+                  "type": "string",
+                  "example": "取得該貼文"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "string",
+                      "example": "627140f3b29cc8686c006aee"
+                    },
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "_id": {
+                          "type": "string",
+                          "example": "62713a3072d92f8a2b5ffaa0"
+                        },
+                        "name": {
+                          "type": "string",
+                          "example": "Malenia"
+                        },
+                        "photo": {
+                          "type": "string",
+                          "example": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets2.rockpapershotgun.com%2Fmalenia-head-elden-ring.jpg%2FBROK%2Fthumbnail%2F1600x900%2Fformat%2Fjpg%2Fquality%2F80%2Fmalenia-head-elden-ring.jpg&imgrefurl=https%3A%2F%2Fwww.rockpapershotgun.com%2Felden-ring-malenia-walkthrough&tbnid=zZ40_6GiUtELEM&vet=12ahUKEwix99SyxMP3AhVLAaYKHbzPCPgQMygBegUIARC-AQ..i&docid=h9yFaa_cpbkJ0M&w=1600&h=900&q=malenia&ved=2ahUKEwix99SyxMP3AhVLAaYKHbzPCPgQMygBegUIARC-AQ"
+                        }
+                      }
+                    },
+                    "tags": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "type": {
+                      "type": "string",
+                      "example": "3D"
+                    },
+                    "image": {
+                      "type": "string",
+                      "example": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fresidentevil%2Fimages%2F9%2F9b%2F79ed0989808efad34231eab1f16cdc9a.jpg%2Frevision%2Flatest%3Fcb%3D20150308235202&imgrefurl=https%3A%2F%2Fresidentevil.fandom.com%2Fwiki%2FHUNK&tbnid=_hYsiZPQbWstJM&vet=12ahUKEwiomOKoycP3AhW6zIsBHen8AzwQMygCegQIARAi..i&docid=jUVBewmXl_xTVM&w=484&h=1300&q=hank%20the%20grim%20reaper%20bio%20hazard&ved=2ahUKEwiomOKoycP3AhW6zIsBHen8AzwQMygCegQIARAi"
+                    },
+                    "content": {
+                      "type": "string",
+                      "example": "Hank, the Grim Reaper"
+                    },
+                    "likes": {
+                      "type": "number",
+                      "example": 7777
+                    },
+                    "comments": {
+                      "type": "number",
+                      "example": 77777
+                    },
+                    "createdAt": {
+                      "type": "string",
+                      "example": "2022-05-03T14:49:23.849Z"
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
       },
       "post": {
         "tags": [
