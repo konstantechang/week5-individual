@@ -7,7 +7,9 @@
   "host": "cryptic-forest-61729.herokuapp.com",
   "basePath": "/",
   "tags": [],
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "consumes": [],
   "produces": [],
   "paths": {
@@ -29,7 +31,9 @@
     },
     "/posts/": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Posts"
+        ],
         "description": "",
         "parameters": [
           {
@@ -44,7 +48,9 @@
         "responses": {}
       },
       "post": {
-        "tags": [],
+        "tags": [
+          "Posts"
+        ],
         "description": "",
         "parameters": [],
         "responses": {}
@@ -52,7 +58,9 @@
     },
     "/posts/{id}": {
       "get": {
-        "tags": [],
+        "tags": [
+          "Posts"
+        ],
         "description": "",
         "parameters": [
           {
