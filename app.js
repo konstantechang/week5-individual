@@ -15,6 +15,13 @@ const { receiveMessageOnPort } = require('worker_threads');
 
 const app = express();
 
+//參數中並沒有平常的  req, res
+process.on('uncaughtException', err => {
+    console.error('Uncaughted Exception');
+    console.error(err);
+    process.exit(1);
+});
+
 app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
@@ -97,12 +104,7 @@ process.on('unhandledRejection', (err, promise) => {
     console.log('未補捉到的 rejection: ', promise, '原因: ', err );
 } );
 
-//參數沒有req, res
-process.on('uncaughtException', err => {
-    console.error('Uncaughted Exception');
-    console.error(err);
-    process.exit(1);
-});
+
 
 
 module.exports = app;

@@ -25,7 +25,12 @@ const postController = {
                     select: 'name photo',
                 }
             );
-            successHandler(res, '取得該貼文', post);
+            if(post.data){
+                successHandler(res, '取得該貼文', post);
+
+            }else{
+                return next(appError(400, "無此使用者ID", next));
+            }
         }else{
             //errorHandler(res);
             //改寫為統一處理    自定義錯誤
@@ -37,7 +42,7 @@ const postController = {
             const data = req.body;
             if(data.content){
                 //console.log(data.content);
-                const newPost = await Post.create(data);
+                //const newPost = await Post.create(data);
                 //console.log(newPost);
 
                 // const posts = await Post.find({});
