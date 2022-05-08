@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "start:dev": "NODE_DEV=dev nodemon ./bin/www",
+    "start:production": "NODE_DEV=production nodemon ./bin/www"
   },
   "engines": {
     "node": "v16.x"

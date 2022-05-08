@@ -1,6 +1,7 @@
 const Post = require('../models/postModel');
 const successHandler = require('../utils/successHandler');
 const errorHandler = require('../utils/errorHandler');
+const appError = require('../service/appError');
 
 
 const postController = {
@@ -26,16 +27,18 @@ const postController = {
             );
             successHandler(res, '取得該貼文', post);
         }else{
-            errorHandler(res);
+            //errorHandler(res);
+            //改寫為統一處理    自定義錯誤
+            return next(appError(400, "無此使用者ID", next));
         }
     }, // end of getPostById()
-    createPost: async (req, res) => {
-        try {
+    createPost: async (req, res, next) => {
+        
             const data = req.body;
             if(data.content){
-                console.log(data.content);
+                //console.log(data.content);
                 const newPost = await Post.create(data);
-                console.log(newPost);
+                //console.log(newPost);
 
                 // const posts = await Post.find({});
                 const posts = await Post.find({}).populate(
@@ -46,11 +49,14 @@ const postController = {
                 );
                 successHandler(res, '新增一則貼文', posts);
             }else{
-                errorHandler(res);
-            }          
-        } catch (error) {
-            errorHandler(res, error);
-        }
+                //errorHandler(res);
+                //改為自定義的Error
+                return next(appError(400, "您未填寫 content 資料", next));
+
+            }
+            
+            
+        
     }, // end of createPost()
 
 };//end of postController
