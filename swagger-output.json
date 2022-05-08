@@ -13,14 +13,6 @@
   "consumes": [],
   "produces": [],
   "paths": {
-    "/": {
-      "get": {
-        "tags": [],
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/users/": {
       "get": {
         "tags": [
