@@ -4,7 +4,7 @@
     "title": "Meta API",
     "description": "week5 API"
   },
-  "host": "https://cryptic-forest-61729.herokuapp.com/",
+  "host": "cryptic-forest-61729.herokuapp.com/",
   "basePath": "/",
   "tags": [],
   "schemes": [
