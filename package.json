@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "cross-env NODE_DEV=dev nodemon ./bin/www",
-    "start:production": "cross-env NODE_DEV=production nodemon ./bin/www"
+    "start:production": "cross-env NODE_DEV=production nodemon ./bin/www",
+    "swagger": "node ./swagger.js"
   },
   "engines": {
     "node": "v16.x"
@@ -17,7 +18,9 @@
     "dotenv": "^16.0.0",
     "express": "~4.16.1",
     "mongoose": "^6.3.2",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "swagger-autogen": "^2.5.10",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",

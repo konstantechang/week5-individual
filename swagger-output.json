@@ -1,0 +1,73 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Meta API",
+    "description": "week5 API"
+  },
+  "host": "https://cryptic-forest-61729.herokuapp.com/",
+  "basePath": "/",
+  "tags": [],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/users/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/posts/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query"
+          },
+          {
+            "name": "sort",
+            "in": "query"
+          }
+        ],
+        "responses": {}
+      },
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/posts/{id}": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    }
+  },
+  "definitions": {}
+}

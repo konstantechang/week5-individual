@@ -5,6 +5,8 @@ const logger = require('morgan');
 const cors = require('cors');
 const dotenv = require('dotenv');
 dotenv.config({ path:'./.env' });
+const swaggerUI = require('swagger-ui-express');
+const swaggerFile = require('./swagger-output.json');
 
 require('./connections/mongodb');
 
@@ -30,9 +32,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/posts', postsRouter);
+app.use('/api-doc', swaggerUI.serve, swaggerUI.setup(swaggerFile));
 
 
 
