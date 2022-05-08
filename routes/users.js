@@ -8,6 +8,9 @@ const errorHandler = require('../utils/errorHandler');
 
 /* GET users listing. */
 router.get('/', async (req, res, next)  => {
+  /* 
+    #swagger.tags = ['Users']
+  */
   const users = await User.find({});
   successHandler(res, '取得users資料', users);
   //res.send('respond with a resource');
