@@ -36,7 +36,7 @@
         "tags": [
           "Posts"
         ],
-        "description": "",
+        "description": "取得<b>全部</b>貼文 API",
         "parameters": [
           {
             "name": "q",
