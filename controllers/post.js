@@ -25,12 +25,12 @@ const postController = {
                     select: 'name photo',
                 }
             );
-            if(post.data){
+            // if(post.data){
                 successHandler(res, '取得該貼文', post);
 
-            }else{
-                return next(appError(400, "無此使用者ID", next));
-            }
+            // }else{
+            //     return next(appError(400, "無此使用者ID", next));
+            // }
         }else{
             //errorHandler(res);
             //改寫為統一處理    自定義錯誤
