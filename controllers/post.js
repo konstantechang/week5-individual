@@ -78,12 +78,13 @@ const postController = {
             #swagger.parameters['body'] = {
                 in: 'body',
                 type: 'object',
+                required: true, 
                 description: '資料格式',
                 schema: {
-                    "user": "62713a3072d92f8a2b5ffaa0",
+                    "$user": "62713a3072d92f8a2b5ffaa0",
                     "tags": "ring and soul",
                     "type": "3D",
-                    "content": "Elden Ris is good.",
+                    "$content": "Elden Ris is good.",
                     "image": "https://fakeface.rest/thumb/view/20?minimum_age=25",
                     "likes": 7777,
                     "comments": 77777,
