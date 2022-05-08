@@ -7,6 +7,10 @@ const handleErrorAsync = require('../service/handleErrorAsync');
 
 const postController = {
     getPosts: async (req, res) => {
+        /* 
+            #swagger.tags = ['Posts']
+        */
+
         const query = req.query.q !== undefined ? {"content": new RegExp(req.query.q)} : {};
         const sort = req.query.sort == "dsc" ? {"createdAt": -1} : {'createdAt': 1};
         const getPosts = await Post.find(query).populate(
@@ -18,6 +22,9 @@ const postController = {
         successHandler(res, "所有貼文", getPosts);
     }, //end of getPosts()
     getPostById: async (req, res, next) => {
+        /* 
+            #swagger.tags = ['Posts']
+        */
         const id = req.params.id;
         if(id){
             const post = await Post.findById(id).populate(
@@ -39,6 +46,9 @@ const postController = {
         }
     }, // end of getPostById()
     createPost: async (req, res, next) => {
+        /* 
+            #swagger.tags = ['Posts']
+        */
         
             const data = req.body;
             if(data.content){
