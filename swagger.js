@@ -6,7 +6,7 @@ const doc = {
         description: 'week5 API',
 
     },
-    host: 'https://cryptic-forest-61729.herokuapp.com/',
+    host: 'cryptic-forest-61729.herokuapp.com/',
     schemes: ['http','https'],
 };
 
