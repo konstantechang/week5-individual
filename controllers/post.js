@@ -2,6 +2,7 @@ const Post = require('../models/postModel');
 const successHandler = require('../utils/successHandler');
 const errorHandler = require('../utils/errorHandler');
 const appError = require('../service/appError');
+const handleErrorAsync = require('../service/handleErrorAsync');
 
 
 const postController = {
@@ -46,12 +47,15 @@ const postController = {
                 //console.log(newPost);
 
                 // const posts = await Post.find({});
-                const posts = await Post.find({}).populate(
-                    {
-                        path: 'user',
-                        select: 'name photo',
-                    }
-                );
+                // const posts = await Post.find({}).populate(
+                //     {
+                //         path: 'user',
+                //         select: 'name photo',
+                //     }
+                // );
+
+                const posts = await Post.create(data);
+
                 successHandler(res, '新增一則貼文', posts);
             }else{
                 //errorHandler(res);
