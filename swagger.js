@@ -6,8 +6,8 @@ const doc = {
         description: 'week5 API',
 
     },
-    host: 'cryptic-forest-61729.herokuapp.com/',
-    schemes: ['http','https'],
+    host: 'cryptic-forest-61729.herokuapp.com',
+    schemes: ['https'],
 };
 
 //output file   jason檔的名字
